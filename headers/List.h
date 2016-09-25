@@ -5,7 +5,7 @@
 #include <sys/types.h>
 
 #ifdef __cplusplus
-#define "C" {
+extern "C" {
 #endif
 
 typedef void *	Data;
@@ -16,7 +16,7 @@ typedef struct _ListNode
 	Data data;
 	struct _ListNode *next;
 }ListNode;
-
+//链表头结构
 typedef struct _List
 {
 	size_t lt_len;
@@ -31,7 +31,9 @@ typedef ListNode Lnode;
 typedef ssize_t Index;
 
 /*链表元素个数*/
-size_t listSize(List *list);
+//size_t listSize(List *list);
+#define listSize(listp) \
+    ((listp)->lt_len)
 /*初始化链表*/
 void listInit(List *list);
 
@@ -61,7 +63,7 @@ void destroyList(List *list);
 
 
 #ifdef __cplusplus
-#define }
+}
 #endif
 
 #endif //LIST_H

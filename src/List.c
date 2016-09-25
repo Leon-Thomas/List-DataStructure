@@ -85,6 +85,7 @@ bool listAppend(List *list,Data d,size_t dsize)
 			return false;
 		}
 		memcpy(tmp->data,d,dsize);
+        tmp->next = NULL;
 
 		if(p != NULL)
 		{
