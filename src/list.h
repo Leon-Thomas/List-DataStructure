@@ -1,5 +1,5 @@
-#ifndef SRC/LIST_H
-#define SRC/LIST_H
+#ifndef LIST_H
+#define LIST_H
 
 #include <stddef.h>
 
@@ -9,4 +9,4 @@ typedef struct list_node
     struct list_node *prev;
 }List;
 
-#endif //SRC/LIST_H
+#endif //LIST_H
